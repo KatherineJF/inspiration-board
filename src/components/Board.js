@@ -115,6 +115,7 @@ class Board extends Component {
       return <Card
       {...card}
       key={card.id}
+      removeCardCallback={this.removeCard}
                 />
       });
 

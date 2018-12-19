@@ -19,7 +19,7 @@ const Card = (props) => {
         </p>
         <section className="card__content-emoji">
         {props.emoji && emoji.getUnicode(props.emoji)}
-        <button onClick={() => props.deleteCardCallback(props.id)} type="button" className="card__delete">X</button>
+        <button onClick={() => props.removeCardCallback(props.id)} type="button" className="card__delete">X</button>
         </section>
       </article>
     </section>
@@ -32,7 +32,8 @@ Card.propTypes = {
 
     id: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
-    emojii: PropTypes.string.isRequired,
+    emoji: PropTypes.string.isRequired,
+    removeCardCallback: PropTypes.func.isRequired,
 
 }
 Card.propTypes = {
